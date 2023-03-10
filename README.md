@@ -3,6 +3,7 @@
 → Como rodar o back end;
 
 • Clonar o repositorio Projeto-Biblioteca;
+
 • Abrir com VSCode;
 • Abir o terminal apertando CTRL + ";
 • Digitar: cd back;
