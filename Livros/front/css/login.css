@@ -16,7 +16,7 @@ body {
   display: flex;
 }
 .bemvindo {
-  margin-left: 10vw;
+  margin-left: 10%;
   position: absolute;
   top: 25%;
 }
@@ -95,7 +95,7 @@ section {
 }
 
 .button_submit {
-  width: 100%;
+  width: 65%;
   height: 54px;
   font-size: 14px;
   color: white;

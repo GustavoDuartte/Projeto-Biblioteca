@@ -26,7 +26,8 @@ function autenticar() {
     };
 
     localStorage.setItem("usuario", JSON.stringify(info));
-    window.location.href = "./form.html";
+
+    window.location.href = "../pages/form.html";
   } else {
     alert("Usuário e senha inválidos");
   }
