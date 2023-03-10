@@ -16,29 +16,71 @@
         <li><a href="./login.html">Login</a></li>
       </ul>
     </nav>
-    <form class="form">
-      <div class="form-control">
-        <label for="title">Título:</label>
-        <input type="text" name="title" autocomplete="on" />
+    <div class="card">
+      <div class="card-header">
+        <div class="text-header">Registrar</div>
       </div>
-      <div class="form-control">
-        <label for="author">Autor:</label>
-        <input type="text" name="author" autocomplete="on" />
+      <div class="card-body">
+        <form action="#">
+          <div class="form-group">
+            <label for="username">Titulo:</label>
+            <input
+              required=""
+              class="form-control"
+              name="titulo"
+              id="titulo"
+              type="text"
+              autocomplete="on"
+            />
+          </div>
+          <div class="form-group">
+            <label for="username">Autor:</label>
+            <input
+              required=""
+              class="form-control"
+              name="autor"
+              id="autor"
+              type="text"
+              autocomplete="on"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Preço:</label>
+            <input
+              required=""
+              class="form-control"
+              name="preco"
+              id="preco"
+              type="number"
+              step="0.01"
+              autocomplete="on"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Data da retirada:</label>
+            <input
+              required=""
+              class="form-control"
+              name="data_emprestado"
+              id="data_emprestado"
+              type="date"
+              autocomplete="on"
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Data prevista para entrega:</label>
+            <input
+              required=""
+              class="form-control"
+              id="data_prev_dev"
+              name="data_prev_dev"
+              type="date"
+              autocomplete="on"
+            />
+          </div>
+          <input type="submit" class="btn" value="Cadastrar" />
+        </form>
       </div>
-      <div class="form-control">
-        <label for="price">Preço:</label>
-        <input type="number" name="price" step="0.01" autocomplete="on" />
-      </div>
-      <div class="form-control">
-        <label for="date_emprest">Data de retirada:</label>
-        <input type="date" name="date_emprest" autocomplete="on" />
-      </div>
-      <div class="form-control">
-        <label for="date_prev_dev">Data prevista para entrega:</label>
-        <input type="date" name="date_prev_dev" autocomplete="on" />
-      </div>
-
-      <input type="submit" value="Cadastrar" class="botao" />
-    </form>
+    </div>
   </body>
 </html>

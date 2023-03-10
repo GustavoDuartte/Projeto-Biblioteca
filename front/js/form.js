@@ -1,5 +1,5 @@
 const uri = "http://localhost:3000/livro";
-const form = document.querySelector(".form");
+const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

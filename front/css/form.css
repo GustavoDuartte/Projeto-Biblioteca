@@ -1,102 +1,93 @@
 @import url("./header.css");
-
-* {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
-  background-image: url("https://www.intersaberes.com/wp-content/uploads/2020/11/139786707-1024x735.jpg");
-  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://i0.wp.com/multarte.com.br/wp-content/uploads/2018/12/fundo-preto-background110.jpg?resize=696%2C392&ssl=1");
   background-repeat: no-repeat;
+  background-size: cover;
 }
-
-.form {
-  background-color: rgba(255, 255, 255, 0.637);
-  height: 450px;
-  width: 450px;
-  margin: 0 auto;
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 30px;
-  box-shadow: 2px 2px 13px 3px rgba(0, 0, 0, 0.479);
-  border-radius: 5px;
+  justify-content: center;
 }
-
-.form-control {
+.card {
+  width: 450px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 50px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.5em;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-control label {
-  font-weight: bold;
-  margin-bottom: 0.3em;
-  width: 280px;
-}
-
-.form-control input {
-  outline: none;
-  padding: 5px;
-  border: none;
-  border-radius: 7px;
-  padding-left: 10px;
-  height: 20px;
-  box-shadow: 2px 2px 13px 3px rgba(0, 0, 0, 0.479);
-}
-.form .botao {
-  width: 80px;
-  height: 40px;
-  margin-top: 10px;
-  border-radius: 10px;
-  font-weight: bold;
-  box-shadow: 2px 2px 13px 3px rgba(0, 0, 0, 0.637);
-  background-color: white;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.form .botao:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  box-shadow: 2px 2px 13px 3px rgb(255, 255, 255);
-}
-
-/* BOOKS */
-.books-container {
-  width: 450px;
-  margin: 0 auto;
-}
-
-.books-container div {
-  border-bottom: 1px solid #ccc;
-  padding: 5px;
-  margin: 5px;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-/* BOOK */
-#book-page {
-  padding: 2em;
-}
-
-#book-page .container {
+.card-header {
   text-align: center;
 }
 
-.actions {
-  margin-top: 1em;
-  display: flex;
-  justify-content: center;
+.card-header .text-header {
+  margin: 10px;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(255, 255, 255);
 }
 
-.actions a {
-  margin-right: 1rem;
+.card-body {
+  padding: 16px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1px;
+  color: white;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"] {
+  width: 300px;
+  height: 20px;
+  padding: 8px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  padding: 12px 24px;
+  margin-left: 13px;
+  font-size: 16px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+  color: #333;
 }

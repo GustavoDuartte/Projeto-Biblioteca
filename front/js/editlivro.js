@@ -1,17 +1,17 @@
 const uri = "http://localhost:3000/livro";
-const form = document.querySelector(".form");
+const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const body = {
     id: form.id.value,
-    title: form.title.value,
-    author: form.author.value,
-    price: form.price.value,
-    date_emprest: form.date_emprest.value,
-    date_prev_dev: form.date_prev_dev.value,
-    date_devolution: form.date_devolution.value,
+    titulo: form.titulo.value,
+    autor: form.autor.value,
+    preco: form.preco.value,
+    data_emprestado: form.data_emprestado.value,
+    data_prev_dev: form.data_prev_dev.value,
+    data_devolucao: form.data_devolucao.value,
   };
 
   const options = {

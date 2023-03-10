@@ -18,14 +18,23 @@ function montarTabela(vetor) {
     let col7 = document.createElement("td");
     let col8 = document.createElement("td");
     let col9 = document.createElement("td");
+    let col10 = document.createElement("td");
+
+    let ed = document.createElement("button");
+    ed.className = "bottone5";
+    ed.innerHTML = "Editar";
+
+    ed.addEventListener("click", () => {
+      window.location.href = "../pages/editLivro.html";
+    });
 
     let del = document.createElement("button");
     del.className = "bottone5";
-    del.innerHTML = "Del";
+    del.innerHTML = "Deletar";
     del.setAttribute("onclick", `excluirItem('${e.id}')`);
 
     col1.innerHTML = e.id;
-    col2.innerHTML = `<a href='./editLivro.html'>${e.titulo}</a>`;
+    col2.innerHTML = e.titulo;
     col3.innerHTML = e.autor;
     col4.innerHTML = formatarMoeda(e.preco);
     col5.innerHTML = formatarData(e.data_emprestado);
@@ -37,7 +46,8 @@ function montarTabela(vetor) {
 
     col8.innerHTML = formatarMoeda(e.multa);
 
-    col9.appendChild(del);
+    col9.appendChild(ed);
+    col10.appendChild(del);
 
     linha.appendChild(col1);
     linha.appendChild(col2);
@@ -49,13 +59,14 @@ function montarTabela(vetor) {
     linha.appendChild(col8);
 
     linha.appendChild(col9);
+    linha.appendChild(col10);
 
     corpo.appendChild(linha);
   });
 }
 
 function excluirItem(i) {
-  if (confirm("Valida Exclusao"))
+  if (confirm("Excluido"))
     fetch(uri + "/delete/" + i, { method: "DELETE" })
       .then((resp) => resp.status)
       .then((resp) => {
