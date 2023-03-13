@@ -8,10 +8,9 @@ form.addEventListener("submit", (e) => {
     id: form.id.value,
     titulo: form.titulo.value,
     autor: form.autor.value,
-    preco: form.preco.value,
     data_emprestado: form.data_emprestado.value,
-    data_prev_dev: form.data_prev_dev.value,
     data_devolucao: form.data_devolucao.value,
+    nome_cliente: form.nome_cliente.value,
   };
 
   const options = {

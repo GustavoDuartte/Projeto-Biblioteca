@@ -12,13 +12,11 @@ function montarTabela(vetor) {
     let col1 = document.createElement("td");
     let col2 = document.createElement("td");
     let col3 = document.createElement("td");
-    let col4 = document.createElement("td");
     let col5 = document.createElement("td");
     let col6 = document.createElement("td");
     let col7 = document.createElement("td");
     let col8 = document.createElement("td");
     let col9 = document.createElement("td");
-    let col10 = document.createElement("td");
 
     let ed = document.createElement("button");
     ed.className = "bottone5";
@@ -36,30 +34,22 @@ function montarTabela(vetor) {
     col1.innerHTML = e.id;
     col2.innerHTML = e.titulo;
     col3.innerHTML = e.autor;
-    col4.innerHTML = formatarMoeda(e.preco);
     col5.innerHTML = formatarData(e.data_emprestado);
-    col6.innerHTML = formatarData(e.data_prev_dev);
+    col6.innerHTML = formatarData(e.data_devolucao);
+    col7.innerHTML = e.nome_cliente;
 
-    if (e.date_devolution != undefined) {
-      col7.innerHTML = formatarData(e.data_devolucao);
-    }
-
-    col8.innerHTML = formatarMoeda(e.multa);
-
-    col9.appendChild(ed);
-    col10.appendChild(del);
+    col8.appendChild(ed);
+    col9.appendChild(del);
 
     linha.appendChild(col1);
     linha.appendChild(col2);
     linha.appendChild(col3);
-    linha.appendChild(col4);
     linha.appendChild(col5);
     linha.appendChild(col6);
     linha.appendChild(col7);
-    linha.appendChild(col8);
 
+    linha.appendChild(col8);
     linha.appendChild(col9);
-    linha.appendChild(col10);
 
     corpo.appendChild(linha);
   });
@@ -81,11 +71,4 @@ function formatarData(data) {
     month: "2-digit",
     year: "numeric",
   });
-}
-
-function formatarMoeda(valor) {
-  return new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  }).format(valor);
 }

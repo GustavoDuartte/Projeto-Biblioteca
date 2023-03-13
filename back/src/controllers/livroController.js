@@ -28,10 +28,13 @@ const read = (req, res) => {
 const update = (req, res) => {
   let livro = new Livro(req.body);
 
-  con.query(livro.update(), function (err, result) {
-    if (err) res.status(404).end();
-
-    if (result.affectedRows > 0) res.status(204).end();
+  con.query(livro.update(), (err, result) => {
+    if (result.affectedRows > 0){
+      res.status(204).end()
+    } else{
+      res.status(404).end()
+    }
+    
   });
 };
 
